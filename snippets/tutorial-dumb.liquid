@@ -1,0 +1,44 @@
+{%- style -%}
+  .container {
+    display: flex;
+  }
+  .gray-bg {
+    margin: 10px;
+    background: lightgray;
+    max-width: max-content;
+  }
+{%- endstyle -%}
+
+{%- if collection -%}
+
+  <div class="container">
+    {%- for product in collection.products -%}
+      <div class="gray-bg">
+        <p style="padding: 4px; background: gray; color: white; max-width:max-content; margin: auto; min-width:40px; display: grid; place-content: center;">{{ forloop.index }}</p>
+        <p style="
+      {%- if forloop.first -%}
+      color: red; 
+          {%- elsif forloop.last -%}  
+          color: green; 
+      {%-endif-%}">
+          {{ product.title }}
+        </p>
+        {%- if product.tags.size > 0 -%}
+          <h2>Tags</h2>
+          <ul>
+            {%- for tag in product.tags -%}
+              {%- if tag == 'brush' -%}
+                {%- continue -%}
+              {%- endif -%}
+              <li>{{ forloop.parentloop.index }}-{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- else -%}
+          {% comment %} <h2>No Tags</h2> {% endcomment %}
+        {%- endif -%}
+      </div>
+    {%- else -%}
+      <p>This collection doesn't have any product</p>
+    {%- endfor -%}
+  </div>
+{%- endif -%}

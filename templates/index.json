@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner": {
@@ -58,8 +49,8 @@
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "view_all_style": "outline",
+        "enable_desktop_slider": true,
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -72,7 +63,15 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "promotion_group_afqznx": {
+      "type": "promotion-group",
+      "settings": {
+        "header_text": "Thiis is a promotion group",
+        "alignment": "center",
+        "body_text": ""
+      }
     }
   },
-  "order": ["image_banner", "featured_collection"]
+  "order": ["image_banner", "featured_collection", "promotion_group_afqznx"]
 }

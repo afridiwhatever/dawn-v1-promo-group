@@ -1,0 +1,47 @@
+<div>
+  <h1 style="text-align:{{section.settings.alignment}}">{{ section.settings.header_text }}</h1>
+  <p>
+    {{section.settings.body_text}}
+  </p>
+  {%- if section.settings.image -%}
+    {{ section.settings.image |  image_url: width:500 | image_tag }}
+  {%- endif -%}
+
+</div>
+
+{% schema %}
+  {
+    "name": "Promotion Group",
+    "tag": "article",
+    "class": "promotion-group",
+    "settings": [
+      {
+        "type": "text",
+        "id": "header_text",
+        "label": "Header Text",
+        "default": "Enter header text here"
+      },
+      {
+        "type": "text_alignment",
+        "id": "alignment",
+        "label": "Header Text Alignment",
+        "default": "center"
+      },
+      {
+        "type": "textarea",
+        "id": "body_text",
+        "label": "Body Content"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Body Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Promotion Group"
+      }
+    ]
+  }
+{% endschema %}
