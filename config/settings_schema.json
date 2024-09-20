@@ -1465,5 +1465,15 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Promotion's Preset",
+    "settings": [
+      {
+        "type": "text",
+        "id": "promotion_announcement_bar_text",
+        "label": "Promotion text for announcement bar"
+      }
+    ]
   }
 ]
